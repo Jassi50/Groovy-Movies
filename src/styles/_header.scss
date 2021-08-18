@@ -1,0 +1,33 @@
+header{
+    background-color: $main-purple;
+    padding: $left-right-spacing;
+    @include single-column-stack;
+    h1 {
+        a{
+            color: $title-color;
+        }
+    }
+
+    nav ul {
+        @include ul-reset;
+        li{
+            a {
+                text-decoration: none;
+                &.active {
+                    color: $hover-text;
+                }
+            }
+        }
+    }
+
+    @media(min-width: $break-point-tablet){
+        @include space-between-items(space-between);
+
+        nav ul {
+            li{
+                display: inline-block;
+                margin: $generic-spacing;
+            }
+        }
+    }
+}

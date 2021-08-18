@@ -1,0 +1,29 @@
+@mixin space-between-items ($justify){
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: center;
+}
+
+// a mixin for making containers or layouts a single column stack
+@mixin single-column-stack {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+// Mixin for ul styles
+@mixin ul-reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+// a mixin for my order buttons for cards
+@mixin order-button {
+    width: 50%;
+    border-radius:0.3125rem;
+    background-color: $main-green;
+}

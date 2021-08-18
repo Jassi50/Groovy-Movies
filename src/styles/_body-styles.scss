@@ -1,7 +1,7 @@
 body {
-    background-color:grey;
-    color: white;
+    background-color:$background-color;
+    color: $text-color;
     a{
-        color: white;
+        color: $text-color;
     }
 }
