@@ -12,10 +12,14 @@ function AppRouter() {
         <Header />
         <main>
           <Switch>
-            <Route path="/" exact><PageHome /></Route>
-            <Route path="/about" exact><PageAbout /></Route>
-            <Route path="/favorites" exact><PageFavorites /></Route>
-            <Route path="/movie/:id" exact><PageSingleMovie /></Route>
+            <Route path="/" exact><PageHome sort='popular' /></Route>
+            <Route path="/sort/popular"><PageHome sort='popular' /></Route>
+            <Route path="/sort/top-rated"><PageHome sort='top-rated' /></Route>
+            <Route path="/sort/in-theatres"><PageHome sort='in-theatres' /></Route>
+            <Route path="/sort/comming-soon"><PageHome sort='comming-soon' /></Route>
+            <Route path="/about"><PageAbout /></Route>
+            <Route path="/favorites"><PageFavorites /></Route>
+            <Route path="/movie/:id"><PageSingleMovie /></Route>
           </Switch>
         </main>
         <Footer />

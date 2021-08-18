@@ -1,7 +1,11 @@
+import NavSort from '../components/NavSort';
+import Movies from '../components/Movies';
+
 function PageHome() {
     return (
         <section className="home-page">
-            ET, phone home...
+            <NavSort />
+            <Movies />
         </section>
     )
 }
