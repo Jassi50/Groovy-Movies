@@ -1,0 +1,18 @@
+// Variable and mixin declarations
+@import './variables';
+@import './mixins';
+
+//resets
+@import './normalize-fwd';
+@import './typography';
+
+//component styling
+@import './body-styles';
+@import './wrapper';
+@import './header';
+@import './nav';
+@import './movies';
+@import './movie-card';
+@import './footer';
+
+
