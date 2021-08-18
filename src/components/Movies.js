@@ -2,7 +2,7 @@ import MovieCard from './MovieCard';
 
 function Movies() {
     return (
-        <div className="Movies-container">
+        <div className="movies-container">
             <MovieCard />
             <MovieCard />
             <MovieCard />

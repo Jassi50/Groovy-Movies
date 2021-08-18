@@ -8,8 +8,9 @@ function MovieCard() {
                 <img src={poster} alt="Godzilla vs King Kong" />
             </div>
             <div className="movie-info">
-                <h3>Godzilla vs King Kong</h3>
-                <Link to="/">More Info</Link>
+                <p>Godzilla vs King Kong</p>
+                <p>date</p>
+                <button className="card-button"><Link to="/">More Info</Link></button>
             </div>
         </div>
     )

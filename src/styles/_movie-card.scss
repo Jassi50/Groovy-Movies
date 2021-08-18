@@ -1,0 +1,46 @@
+.movie-card {
+    //border: solid 1px white;
+    max-width: 18.75rem;
+    margin: 0 auto;
+
+    position:relative; // card itself is container
+    
+    max-height: 550px;
+    .movie-poster {
+        max-height: 450px;
+    }
+    
+    .movie-info{
+        margin-bottom: $generic-spacing2;
+        background-color: $main-purple;
+        padding: $generic-spacing2;
+
+        //curvature of bottom of card
+        border-bottom-right-radius: $generic-spacing;
+        border-bottom-left-radius: $generic-spacing;
+    }
+
+    .card-button{
+        background-color: $main-purple;
+        z-index: -1;
+        position: absolute;
+        bottom: 25%;
+        left: 33%;
+        background-color: $second-green;
+        border-radius: 5px;
+        border: none;
+        padding: 7px 30px;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    //to be tweaked so for an image 
+    &:hover {
+        .card-button {
+            z-index: 10;
+        }
+    }
+    
+}

@@ -1,0 +1,19 @@
+// We will be working here after the break I will be back at 1:50 PM
+
+//Happy lunches :)
+
+.movies-container {
+    padding: $left-right-spacing;
+
+    @media(min-width: $break-point-tablet){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $generic-spacing;
+    }
+
+    @media(min-width: $break-point-desktop){
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: $generic-spacing;
+    }
+}
