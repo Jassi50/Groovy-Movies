@@ -1,4 +1,4 @@
-import poster from '../images//godzilla-vs-kong-demo-poster.jpg';
+import poster from '../images/godzilla-vs-kong-demo-poster.jpg';
 import { Link } from 'react-router-dom';
 
 function MovieCard() {
