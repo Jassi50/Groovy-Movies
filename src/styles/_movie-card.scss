@@ -22,9 +22,12 @@
     .card-button{
         background-color: $main-purple;
         z-index: -1;
+        left: 0;
+        right: 0;
+        bottom: 110px;
+        margin: auto;
         position: absolute;
-        bottom: 25%;
-        left: 33%;
+
         background-color: $second-green;
         border-radius: 5px;
         border: none;
