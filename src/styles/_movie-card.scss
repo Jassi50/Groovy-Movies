@@ -1,23 +1,22 @@
 .movie-card {
-    //border: solid 1px white;
-    max-width: 18.75rem;
-    margin: 0 auto;
-
+    
     position:relative; // card itself is container
-    
-    max-height: 550px;
-    .movie-poster {
-        max-height: 450px;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: $generic-spacing2;
+
+
+    img {
+        display:block; // allows for the image to stretch the height of it's container
+        width:100%;  
     }
-    
+
     .movie-info{
-        margin-bottom: $generic-spacing2;
         background-color: $main-purple;
         padding: $generic-spacing2;
-
-        //curvature of bottom of card
-        border-bottom-right-radius: $generic-spacing;
-        border-bottom-left-radius: $generic-spacing;
+        //curvature for bottom of cards
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
     }
 
     .card-button{
