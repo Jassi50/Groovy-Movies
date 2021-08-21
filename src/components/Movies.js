@@ -1,20 +1,11 @@
 import MovieCard from './MovieCard';
 
-function Movies() {
+//pass movie data as a prop from PageHome
+function Movies({ movieData }) {
     return (
         <div className="movies-container">
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
+            {/* Display a current movie for each instance of array.map */}
+            {movieData.map((currentMovie, i) => <MovieCard key={i} movieObj={currentMovie} />)}
         </div>
     )
 }

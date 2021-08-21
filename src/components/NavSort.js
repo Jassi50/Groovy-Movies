@@ -7,7 +7,7 @@ function NavSort() {
               <li><NavLink to="/sort/popular">Popular</NavLink></li>
               <li><NavLink to="/sort/top-rated">Top Rated</NavLink></li>
               <li><NavLink to="/sort/in-theatres">In Theatres</NavLink></li>
-              <li><NavLink to="/sort/comming-soon">Coming Soon</NavLink></li>
+              <li><NavLink to="/sort/coming-soon">Coming Soon</NavLink></li>
           </ul>  
         </nav>
     )

@@ -5,6 +5,7 @@ import PageHome from '../pages/PageHome';
 import PageAbout from '../pages/PageAbout';
 import PageFavorites from '../pages/PageFavorites';
 import PageSingleMovie from '../pages/PageSingleMovie';
+
 function AppRouter() {
   return (
     <Router>
@@ -12,11 +13,12 @@ function AppRouter() {
         <Header />
         <main>
           <Switch>
+            {/* the sort prop is what the API uses for grabing movies based on category  the paths must match the paths for the nav links in nav sort*/}
             <Route path="/" exact><PageHome sort='popular' /></Route>
             <Route path="/sort/popular"><PageHome sort='popular' /></Route>
-            <Route path="/sort/top-rated"><PageHome sort='top-rated' /></Route>
-            <Route path="/sort/in-theatres"><PageHome sort='in-theatres' /></Route>
-            <Route path="/sort/comming-soon"><PageHome sort='comming-soon' /></Route>
+            <Route path="/sort/top-rated"><PageHome sort='top_rated' /></Route>
+            <Route path="/sort/in-theatres"><PageHome sort='now_playing' /></Route>
+            <Route path="/sort/coming-soon"><PageHome sort='upcoming' /></Route>
             <Route path="/about"><PageAbout /></Route>
             <Route path="/favorites"><PageFavorites /></Route>
             <Route path="/movie/:id"><PageSingleMovie /></Route>
