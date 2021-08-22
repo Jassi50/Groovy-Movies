@@ -1,0 +1,31 @@
+.single-movie-page {
+    margin: 1.25rem
+}
+
+.single-movie {
+    padding: 0.625rem;
+    margin: 0 auto;
+    max-width: 43.75rem;
+    position: relative;
+
+    .single-movie-content {
+        max-width:70%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+
+        @media(min-width: $break-point-tablet){
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            grid-gap: 1rem
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+    
+}

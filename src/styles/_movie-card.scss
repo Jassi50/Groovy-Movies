@@ -21,13 +21,13 @@
 
     .card-button{
         background-color: $main-purple;
+        position: absolute;
         z-index: -1;
+        //center more info button within a movie-card
         left: 0;
         right: 0;
-        bottom: 110px;
         margin: auto;
-        position: absolute;
-
+        bottom: 110px; //place button 110 px away from the bottom of a card
         background-color: $second-green;
         border-radius: 5px;
         border: none;
