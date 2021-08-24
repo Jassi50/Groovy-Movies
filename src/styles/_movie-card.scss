@@ -17,6 +17,7 @@
         //curvature for bottom of cards
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
+        height: 12%;
     }
 
     .card-button{
@@ -29,7 +30,7 @@
         margin: auto;
         bottom: 110px; //place button 110 px away from the bottom of a card
         background-color: $second-green;
-        border-radius: 5px;
+        border-radius: 30px;
         border: none;
         padding: 7px 30px;
 
@@ -43,6 +44,42 @@
         .card-button {
             z-index: 10;
         }
+        
     }
     
+
+   
+    
+}
+
+.movie-div {
+    background-color: black;
+    // display: none;
+}
+
+ .hover-name {
+        position: absolute;
+        left: 3%;
+        top: 0.5%;
+    }
+    .hover-info1 {
+        position: absolute;
+        left: 3%;
+        top: 7%;
+    }
+
+    .hover-info2 {
+        position: absolute;
+        left: 3%;
+        top: 40%;
+    }
+.hover-text {
+    display: none;
+}
+.movie-poster:hover .hover-text {
+    display: block;
+}
+
+.movie-poster:hover .movie-div {
+    display: block;
 }

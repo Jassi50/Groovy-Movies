@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState } from 'react';
 import { useEffect } from 'react';
 import NavSort from '../components/NavSort';
 import Movies from '../components/Movies';
@@ -11,7 +11,7 @@ function PageHome({ sort }) {
 
     //this use effect function runs whenever PageHome is mounted or when sort changes sort is passed to this function as a prop
     useEffect(() => {
-        
+
         const fetchMovies = async () => {
 
             const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?&language=en-US&page=1`, {
@@ -25,16 +25,16 @@ function PageHome({ sort }) {
             let rawMovieData = await res.json();
             rawMovieData = rawMovieData.results.splice(0, 12);
             setMovieData(rawMovieData);
-
+            console.log(rawMovieData);
         }
 
         fetchMovies();
 
         console.log(sort)
     }, [sort]);
-    
-    
-    
+
+
+
     return (
         <section className="home-page">
             <NavSort />
