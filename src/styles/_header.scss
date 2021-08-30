@@ -114,6 +114,7 @@ header {
     right: 60px;
     top: 12px;
     font-size: 1.5rem;
+    z-index: 10;
 }
 
 .search-bar {
@@ -122,9 +123,11 @@ header {
     margin-right: auto;
     left: 0;
     right: 0;
-    margin-top: 50px;
+    top: 50px;
+    background-color: $main-purple;
+    padding: 0.5rem;
     text-align: center;
-    z-index: 10;
+    z-index: 2;
 }
 
 .filter-icon {
@@ -132,6 +135,7 @@ header {
     top: 13px;
     right: 105px;
     font-size: 1.5rem;
+    z-index: 10;
 }
 .nav-sort1 {
     position: absolute;
@@ -146,10 +150,14 @@ header {
 
 @media screen and (min-width: $break-point-tablet) {
     header {
+        h1 {
+            z-index: 100;
+        }
         .logo {
             position: static;
             max-height: 60px;
             margin-top: -0.5rem;
+            z-index: 1000;
         }
     }
 
@@ -158,13 +166,14 @@ header {
         right: 0;
         margin: 0;
         text-align: end;
+        background-color: none;
     }
     .search-icon {
-        right: 41px;
+        right: 21px;
         position: absolute;
         color: #c2c2c2;
         z-index: 100;
-        top: 14px;
+        top: 16px;
         font-size: 1rem;
     }
     .filter-icon {
