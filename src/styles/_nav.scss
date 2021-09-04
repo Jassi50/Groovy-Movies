@@ -1,0 +1,182 @@
+/** @format */
+
+/////////
+
+// .btn {
+//     display: none;
+// }
+// .menu {
+//     background-color: $main-purple;
+//     // display: flex;
+//     // flex-direction: column;
+//     height: 100%;
+//     position: relative;
+//     cursor: pointer;
+//     text-align: center;
+//     flex-wrap: no;
+//     // background-color: red;
+//     padding-left: 9.8rem;
+// }
+
+// .btn {
+//     display: none;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     margin: auto;
+//     padding: 1rem;
+// }
+
+// @media screen and (max-width: $break-point-tablet) {
+//     .btn {
+//         display: block;
+//         top: 0;
+//     }
+//     .menu {
+//         position: absolute;
+//         width: 100%;
+//         z-index: 1;
+//         top: 135px; /* position the top  edge of the element at the middle of the parent */
+//         left: 50%; /* position the left edge of the element at the middle of the parent */
+
+//         transform: translate(-50%, -50%);
+//         flex-direction: column;
+//         height: auto;
+//         background-color: grey;
+//         li {
+//             padding: 1rem;
+//             border-top: 1px solid white;
+//         }
+//     }
+
+// }
+.hover {
+    opacity: 0;
+    max-width: 0px;
+}
+
+.nav {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    list-style: none;
+
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 34px;
+    z-index: 1;
+}
+
+ul {
+    background-color: $second-purple;
+}
+
+li {
+    list-style: none;
+    padding: 1rem;
+    a {
+        text-decoration: none;
+    }
+}
+
+.btn {
+    position: absolute;
+    top: 12px;
+
+    bottom: 50%;
+    right: 20px;
+    font-size: 1.5rem;
+    z-index: 15;
+}
+input {
+    border: 2px solid #8ae866;
+    background-color: $second-purple;
+    border-radius: 10px;
+}
+input::placeholder {
+    padding-left: 1rem;
+    color: white;
+}
+
+// .search-bar {
+//     background-color: $second-purple;
+// }
+
+@media screen and (min-width: $break-point-tablet) {
+    .hover {
+        position: absolute;
+        top: -9px;
+        right: -12px;
+        width: 100px;
+        max-width: 100px;
+        opacity: 0;
+    }
+    .hover.favorites {
+        right: 0;
+    }
+
+    .hover:hover {
+        opacity: 1;
+    }
+
+    .nav {
+        top: 0;
+        z-index: 0;
+        z-index: 100;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        background-color: $main-purple;
+        width: 45%;
+        left: 250px;
+        background-color: $main-purple;
+        position: absolute;
+        top: -16px;
+        padding-left: 0;
+        height: 100%;
+
+        li {
+            width: 100%;
+            justify-content: space-between;
+            z-index: 200;
+            text-align: center;
+
+            padding: 0;
+            padding-right: 2rem;
+
+            a {
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                padding: 1em;
+            }
+        }
+    }
+    .btn {
+        display: none;
+    }
+    input {
+        border: 2px solid #8ae866;
+        background-color: $second-purple;
+        border-radius: 12px;
+    }
+    input::placeholder {
+        padding-left: 1rem;
+        color: white;
+    }
+    .search-bar {
+        position: absolute;
+        right: 0px;
+        top: 5px;
+    }
+    h1 {
+        position: absolute;
+    }
+}

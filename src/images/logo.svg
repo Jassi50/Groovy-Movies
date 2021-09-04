@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="470" height="105" viewBox="0 0 470 105">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 41 37">
+      <image width="41" height="37" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAlCAYAAADfosCNAAAABHNCSVQICAgIfAhkiAAAAIVJREFUWEft1L0NgCAUAGHfQrILe+oswkJoK7G4vFBYHPVByMdPtOMa289HuMlFJ/QpudcSi9ZPLdPP9rqCbjLF+ExSMis3z1NSyVnAfxLcCR8OQEKJkogJREoCJJQoiZhApCRAQomSiAlESgIklCiJmECkJEBCiZKICURKAiSUKImYEtENbxv+97Y37C4AAAAASUVORK5CYII="/>
+    </pattern>
+  </defs>
+  <g id="Website_Title" data-name="Website Title" transform="translate(-2028 1.46)">
+    <text id="Groovy_Movies" data-name="Groovy Movies" transform="translate(2028 -1.46)" fill="#d1add0" font-size="60" font-family="Helvetica" letter-spacing="0.1em"><tspan x="0" y="46">Groovy </tspan></text>
+    <rect id="Music_note_branding" data-name="Music note branding" width="41" height="37" rx="7" transform="translate(2129 30)" fill="url(#pattern)"/>
+  </g>
+</svg>
