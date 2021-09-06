@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { FaFilter } from "react-icons/fa";
-import logo from "../images/logo.svg";
+import logo from "../images/logo.png";
 
 import hover from "../images/LightHover.png";
 import { FaBars } from "react-icons/fa";

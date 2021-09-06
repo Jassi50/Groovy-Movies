@@ -101,9 +101,9 @@ header {
     }
     .logo {
         position: absolute;
-        top: 0;
+        top: 5px;
         left: 0;
-        max-height: 50px;
+        max-height: 32px;
         padding-left: 0.5rem;
         padding-top: 0.5rem;
     }
@@ -156,8 +156,9 @@ header {
         .logo {
             position: static;
             max-height: 60px;
-            margin-top: -0.5rem;
+            margin-top: -0.3125rem;
             z-index: 1000;
+            padding-left: 0;
         }
     }
 
