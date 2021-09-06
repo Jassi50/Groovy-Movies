@@ -76,6 +76,12 @@ function Header() {
             </h1>
 
             <FaSearch onClick={searchToggle} className="search-icon" />
+            {screenWidth > 800 && (
+                <div className="search-bar2">
+                    <input type="text" placeholder="Search.." id="search" />
+                    <label htmlFor="search"></label>
+                </div>
+            )}
 
             <label onClick={filterToggle} className="btn-filter" for="toggle">
                 <FaFilter onClick={filterToggle} className="filter-icon" />
@@ -125,14 +131,14 @@ function Header() {
                 </nav>
             </div>
 
-            {(toggleSearch || screenWidth > 800) && (
+            {toggleSearch && (
                 <div className="search-bar">
                     <input type="text" placeholder="Search.." id="search" />
                     <label htmlFor="search"></label>
                 </div>
             )}
 
-            {toggleFilter && (
+            {(toggleFilter || screenWidthNav > 800) && (
                 <nav className="nav-sort1">
                     <ul>
                         <li>

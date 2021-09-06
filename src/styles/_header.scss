@@ -1,92 +1,9 @@
 /** @format */
 
-// header {
-//     background-color: $main-purple;
-//     padding: $left-right-spacing;
-//     position: relative;
-
-//     display: flex;
-//     justify-content: space-between;
-
-//     // @include single-column-stack;
-//     h1 {
-//         a {
-//             color: $title-color;
-//         }
-//     }
-
-//     nav ul {
-//         @include ul-reset;
-//         li {
-//             a {
-//                 text-decoration: none;
-//                 &.active {
-//                     color: $hover-text;
-//                 }
-//             }
-//         }
-//     }
-
-//     input {
-//         width: 10rem;
-//         z-index: 200;
-//         left: 0;
-//     }
-
-//     .search-icon {
-//         margin-top: 1rem;
-//         position: absolute;
-//         right: 80px;
-
-//         color: white;
-//     }
-
-//     .search-bar {
-//         position: absolute;
-//         background-color: red;
-//         z-index: 100;
-
-//         width: 100%;
-
-//         width: 10rem;
-
-//         position: absolute;
-//         top: 58px;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-//         margin: auto;
-//     }
-
-//     @media (min-width: $break-point-tablet) {
-//         header {
-//             @include space-between-items(space-between);
-//         }
-
-//         .search-bar {
-//             position: relative;
-//             right: 0;
-//             top: 0px;
-//             order: 2;
-//             margin: auto;
-//         }
-
-//         .search-icon {
-//             color: black;
-//             right: 20px;
-//             top: 5px;
-//             position: absolute;
-//             display: none;
-//         }
-
-//         nav ul {
-//             li {
-//                 display: inline-block;
-//                 margin: $generic-spacing;
-//             }
-//         }
-//     }
-// }
+ul {
+    list-style: none;
+    padding-left: 0;
+}
 
 header {
     display: flex;
@@ -161,6 +78,12 @@ header {
             padding-left: 0;
         }
     }
+    .search-bar2 {
+        position: absolute;
+        top: 12px;
+        right: 22px;
+        z-index: 1000;
+    }
 
     .search-bar {
         top: 0;
@@ -168,16 +91,22 @@ header {
         margin: 0;
         text-align: end;
         background-color: none;
+        display: none;
     }
     .search-icon {
-        right: 21px;
+        right: 32px;
         position: absolute;
         color: #c2c2c2;
-        z-index: 100;
+        z-index: 10000;
         top: 16px;
         font-size: 1rem;
     }
     .filter-icon {
         display: none;
+    }
+    .nav-sort1 {
+        li {
+            display: inline-flex;
+        }
     }
 }
