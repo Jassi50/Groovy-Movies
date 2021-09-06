@@ -23,7 +23,9 @@ function NavSort() {
         //       <li><NavLink to="/sort/comming-soon">Coming Soon</NavLink></li>
         //   </ul>  
         // </nav>
-        <div></div>
+        <div>
+            
+        </div>
       
     )
 }
