@@ -1,17 +1,20 @@
+/** @format */
+
 // Variable and mixin declarations
-@import './variables';
-@import './mixins';
+@import "./variables";
+@import "./mixins";
 
 //resets
-@import './normalize-fwd';
-@import './typography';
+@import "./normalize-fwd";
+@import "./typography";
 
 //component styling
-@import './body-styles';
-@import './wrapper';
-@import './header';
-@import './nav';
-@import './movies';
-@import './movie-card';
-@import './single-movie';
-@import './footer';
+@import "./body-styles";
+@import "./wrapper";
+@import "./header";
+@import "./nav";
+@import "./movies";
+@import "./movie-card";
+@import "./single-movie";
+@import "./footer";
+@import "./about";
