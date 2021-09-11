@@ -101,7 +101,7 @@ function Header() {
                         {(toggleMenu || screenWidthNav > 800) && (
                             <ul className="menu">
                                 <li>
-                                    <NavLink to="/" exact>
+                                    <NavLink to="/" exact onClick={toggleNav}>
                                         <img
                                             className="hover"
                                             src={hover}
@@ -111,8 +111,7 @@ function Header() {
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/about">
-                                        {" "}
+                                    <NavLink to="/about" onClick={toggleNav}>
                                         <img
                                             className="hover"
                                             src={hover}
@@ -122,7 +121,10 @@ function Header() {
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/favorites">
+                                    <NavLink
+                                        to="/favorites"
+                                        onClick={toggleNav}
+                                    >
                                         <img
                                             className="hover favorites"
                                             src={hover}
@@ -149,18 +151,31 @@ function Header() {
                 <nav className="nav-sort1">
                     <ul>
                         <li>
-                            <NavLink to="/sort/popular">Popular</NavLink>
+                            <NavLink to="/sort/popular" onClick={filterToggle}>
+                                Popular
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/sort/top-rated">Top Rated</NavLink>
+                            <NavLink
+                                to="/sort/top-rated"
+                                onClick={filterToggle}
+                            >
+                                Top Rated
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/sort/in-theatres">
+                            <NavLink
+                                to="/sort/in-theatres"
+                                onClick={filterToggle}
+                            >
                                 In Theatres
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/sort/comming-soon">
+                            <NavLink
+                                to="/sort/comming-soon"
+                                onClick={filterToggle}
+                            >
                                 Coming Soon
                             </NavLink>
                         </li>
