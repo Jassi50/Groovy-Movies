@@ -1,6 +1,12 @@
 /** @format */
+.heart-icon{
+    width:30px;
+    height:30px;
+    background-color: transparent;
+    border:none;
+}
 
-.about-container{
+.favorites-text-container{
     margin: 4rem 2rem;
     padding: 1rem;
     background-color: #313131;
@@ -16,7 +22,7 @@
     -moz-box-shadow: 0px 0px 7px 3px #8ae866, 0px 0px 10px 13px #662d64;
     box-shadow: 0px 0px 7px 3px #8be866a1, 0px 0px 10px 13px#662d6494;
 }
-.about-header {
+.favorites-header {
     font-size: 3rem;
     font-weight: 300;
     margin: 0 auto;
@@ -30,12 +36,12 @@ p {
 }
 
 @media screen and (min-width: 800px) {
-    .about-container {
+    .favorites-text-container {
         margin-top: 8rem;
         margin-left: auto;
         margin-right: auto;
         max-width: 790px;
-        .about-header {
+        .favorites-header {
             margin: 0;
             text-align: left;
             display: inline-block;

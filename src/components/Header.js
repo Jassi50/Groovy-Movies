@@ -16,19 +16,19 @@ function Header() {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const searchToggle = () => {
-        if (toggleFilter == true) {
+        if (toggleFilter === true) {
             setToggleFilter(false);
         }
-        if (toggleMenu == true) {
+        if (toggleMenu === true) {
             setToggleMenu(false);
         }
         setToggleSearch(!toggleSearch);
     };
     const filterToggle = () => {
-        if (toggleSearch == true) {
+        if (toggleSearch === true) {
             setToggleSearch(false);
         }
-        if (toggleMenu == true) {
+        if (toggleMenu === true) {
             setToggleMenu(false);
         }
         setToggleFilter(!toggleFilter);
@@ -47,10 +47,10 @@ function Header() {
     const [screenWidthNav, setScreenWidthNav] = useState(window.innerWidth);
 
     const toggleNav = () => {
-        if (toggleFilter == true) {
+        if (toggleFilter === true) {
             setToggleFilter(false);
         }
-        if (toggleSearch == true) {
+        if (toggleSearch === true) {
             setToggleSearch(false);
         }
 
@@ -153,7 +153,7 @@ function Header() {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/sort/comming-soon">
+                            <NavLink to="/sort/coming-soon">
                                 Coming Soon
                             </NavLink>
                         </li>

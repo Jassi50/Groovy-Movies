@@ -1,5 +1,4 @@
 .movie-card {
-    
     position:relative; // card itself is container
     max-width: 300px;
     margin: 0 auto;
@@ -12,12 +11,22 @@
     }
 
     .movie-info{
+        position:relative;
+        .heart-icon{
+            position:absolute;
+            top: 5px;
+            right: 5px;
+        }
         background-color: $main-purple;
         padding: $generic-spacing2;
         //curvature for bottom of cards
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
-        height: 12%;
+        min-height: 124px; // setting the minimum info height to what a container would look like with 2 lines of text
+
+        p {
+            max-width: 80%; // creating room for icons
+        }
     }
 
     .card-button{
@@ -46,10 +55,6 @@
         }
         
     }
-    
-
-   
-    
 }
 
 .movie-div {
