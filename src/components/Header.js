@@ -15,6 +15,9 @@ function Header() {
     const [toggleFilter, setToggleFilter] = useState(false);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
+    const [toggleMenu, setToggleMenu] = useState(false);
+    const [screenWidthNav, setScreenWidthNav] = useState(window.innerWidth);
+
     const searchToggle = () => {
         if (toggleFilter == true) {
             setToggleFilter(false);
@@ -41,11 +44,7 @@ function Header() {
         window.addEventListener("resize", changeWidth);
     }, []);
 
-    // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-    const [toggleMenu, setToggleMenu] = useState(false);
-    const [screenWidthNav, setScreenWidthNav] = useState(window.innerWidth);
-
+    //nav sort  section
     const toggleNav = () => {
         if (toggleFilter == true) {
             setToggleFilter(false);
@@ -63,8 +62,6 @@ function Header() {
         };
         window.addEventListener("resize", changeWidthNav);
     }, []);
-
-    // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
     return (
         <>
