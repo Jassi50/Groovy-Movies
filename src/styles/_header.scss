@@ -105,6 +105,11 @@ header {
         display: none;
     }
     .nav-sort1 {
+        position: static;
+        ul {
+            margin: 0;
+            margin-bottom: 3rem;
+        }
         li {
             display: inline-flex;
         }
