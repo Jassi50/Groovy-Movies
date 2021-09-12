@@ -25,19 +25,14 @@ function PageHome({ sort }) {
             let rawMovieData = await res.json();
             rawMovieData = rawMovieData.results.splice(0, 12);
             setMovieData(rawMovieData);
-            console.log(rawMovieData);
         }
-
         fetchMovies();
-
-        console.log(sort)
     }, [sort]);
 
 
 
     return (
         <section className="home-page">
-            
             <NavSort />
             {/* Display movie data if there's movie data to display*/}
             {movieData !== null && <Movies movieData={movieData} />}

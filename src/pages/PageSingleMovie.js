@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { API_TOKEN } from '../utilities/globals';
 import SingleMovie from '../components/SingleMovie';
@@ -28,7 +28,7 @@ function PageSingleMovie() {
 
         fetchMovie();
 
-    }, []);
+    }, [id]);
 
     return (
         <section className="single-movie-page">

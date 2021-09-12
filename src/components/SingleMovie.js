@@ -1,4 +1,5 @@
 import noPoster from '../images/no-movie-poster.jpg';
+import FavoriteButton from './FavoriteButton';
 
 function SingleMovie({ movieObj }) {
 
@@ -13,6 +14,7 @@ function SingleMovie({ movieObj }) {
                 </div>
                 <div className="single-movie-info">
                     <h2>{movieObj.title}</h2>
+                    <FavoriteButton movieObj={movieObj} />
                     <p>{movieObj.overview}</p>
                 </div>
             </div>
