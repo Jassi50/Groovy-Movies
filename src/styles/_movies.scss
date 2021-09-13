@@ -7,6 +7,8 @@
         gap: $generic-spacing;
     }
 
+    //media querry display 4
+
     @media(min-width: $break-point-desktop){
         display: grid;
         grid-template-columns: repeat(6, 1fr);
