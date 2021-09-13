@@ -54,20 +54,28 @@ header {
   font-size: 1.5rem;
   z-index: 10;
 }
+
 .nav-sort1 {
   position: absolute;
-  top: 4rem;
+  top: 3rem;
   margin-left: auto;
   margin-right: auto;
+  background-color: $main-purple;
   left: 0;
   right: 0;
   text-align: center;
   z-index: 10;
+
+  a {
+    display: block;
+    padding: 0.7rem;
+    text-decoration: none;
+  }
 }
 
 @media screen and (min-width: $break-point-tablet) {
   header {
-    margin-bottom: 3.5rem;
+    margin-bottom: 4.5rem;
 
     h1 {
       z-index: 100;
@@ -113,7 +121,7 @@ header {
 
   .nav-sort1 {
     position: absolute;
-    top: 3rem;
+    top: 3.5rem;
     display: flex;
     width: 32rem;
     height: 2rem;
