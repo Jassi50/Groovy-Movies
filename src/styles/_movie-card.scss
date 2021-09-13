@@ -73,10 +73,16 @@
         top: 7%;
     }
 
+    
     .hover-info2 {
         position: absolute;
-        left: 3%;
-        top: 40%;
+        top: 0%;
+        background-color: grey;
+        width: auto;
+        height: 350px;
+        overflow: auto;
+        text-align: justify;
+        padding: 20px;
     }
 .hover-text {
     display: none;
