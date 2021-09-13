@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
-import NavSort from '../components/NavSort';
 import Movies from '../components/Movies';
 import { API_TOKEN } from '../utilities/globals';
 
@@ -33,7 +32,6 @@ function PageHome({ sort }) {
 
     return (
         <section className="home-page">
-            <NavSort />
             {/* Display movie data if there's movie data to display*/}
             {movieData !== null && <Movies movieData={movieData} />}
         </section>

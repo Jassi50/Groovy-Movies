@@ -1,5 +1,4 @@
 // Global APP state used for favorites
-import React from 'react';
 import globalHook from 'use-global-hook';
 
 //Get favorite movies from local storage
