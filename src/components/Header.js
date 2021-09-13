@@ -165,7 +165,10 @@ function Header() {
                                 In Theatres
                             </NavLink>
 
-                            <NavLink to="/sort/coming-soon">
+                            <NavLink 
+                                to="/sort/coming-soon"
+                                onClick={filterToggle}
+                            >
                                 Coming Soon
                             </NavLink> 
                             <div id="animate"></div>
