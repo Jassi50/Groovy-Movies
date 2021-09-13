@@ -1,5 +1,5 @@
 import useGlobal from '../store/globalAppStorage';
-import fullHeart from '../images/full-heart.jpeg';
+import fullHeart from '../images/full-heart.png';
 import emptyHeart from '../images/empty-heart.svg';
 
 //favorite button
