@@ -146,35 +146,31 @@ function Header() {
             </header>
             {(toggleFilter || screenWidthNav > 800) && (
                 <nav className="nav-sort1">
-                    <ul>
-                        <li>
+                        
                             <NavLink to="/sort/popular" onClick={filterToggle}>
                                 Popular
                             </NavLink>
-                        </li>
-                        <li>
+
                             <NavLink
                                 to="/sort/top-rated"
                                 onClick={filterToggle}
                             >
                                 Top Rated
                             </NavLink>
-                        </li>
-                        <li>
+
                             <NavLink
                                 to="/sort/in-theatres"
                                 onClick={filterToggle}
                             >
                                 In Theatres
                             </NavLink>
-                        </li>
-                        <li>
+
                             <NavLink to="/sort/coming-soon">
                                 Coming Soon
-                            </NavLink>
-                        </li>
-                    </ul>
+                            </NavLink> 
+                            <div id="animate"></div>
                 </nav>
+                
             )}
         </>
     );
