@@ -1,4 +1,13 @@
-.wrapper{
+/** @format */
+
+.wrapper {
     max-width: 1920px;
     margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    main {
+        flex-grow: 1;
+    }
 }

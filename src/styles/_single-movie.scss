@@ -30,12 +30,18 @@
             padding: 1rem;
         }
         .heart-icon {
-            display: inline-flex;
-            align-items: flex-end;
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            border: none;
         }
 
         .icon-flex {
             display: flex;
+            flex-direction: row;
+            align-self: center;
+            align-items: center;
+            align-content: center;
         }
 
         @media (min-width: $break-point-tablet) {

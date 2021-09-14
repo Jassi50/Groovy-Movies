@@ -145,35 +145,26 @@ function Header() {
                 {/* <FaSearch className="search-icon-mobile" /> */}
             </header>
             {(toggleFilter || screenWidthNav > 800) && (
-                <nav className="nav-sort1">
-                        
-                            <NavLink to="/sort/popular" onClick={filterToggle}>
-                                Popular
-                            </NavLink>
+                <div>
+                    <nav className="nav-sort1">
+                        <NavLink to="/sort/popular" onClick={filterToggle}>
+                            Popular
+                        </NavLink>
 
-                            <NavLink
-                                to="/sort/top-rated"
-                                onClick={filterToggle}
-                            >
-                                Top Rated
-                            </NavLink>
+                        <NavLink to="/sort/top-rated" onClick={filterToggle}>
+                            Top Rated
+                        </NavLink>
 
-                            <NavLink
-                                to="/sort/in-theatres"
-                                onClick={filterToggle}
-                            >
-                                In Theatres
-                            </NavLink>
+                        <NavLink to="/sort/in-theatres" onClick={filterToggle}>
+                            In Theatres
+                        </NavLink>
 
-                            <NavLink 
-                                to="/sort/coming-soon"
-                                onClick={filterToggle}
-                            >
-                                Coming Soon
-                            </NavLink> 
-                            <div id="animate"></div>
-                </nav>
-                
+                        <NavLink to="/sort/coming-soon" onClick={filterToggle}>
+                            Coming Soon
+                        </NavLink>
+                        <div id="animate"></div>
+                    </nav>
+                </div>
             )}
         </>
     );
