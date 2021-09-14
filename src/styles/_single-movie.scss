@@ -22,9 +22,17 @@
         border-radius: 5px;
         box-shadow: 0px 0px 7px 3px #8be866a1, 0px 0px 10px 13px #662d6494;
 
-        h2 {
+        .single-page-title {
             border-bottom: 3px solid #b360b0;
             display: inline;
+        }
+        .heart-icon {
+            display: inline-flex;
+        }
+
+        .icon-flex {
+            display: flex;
+            align-self: flex-end;
         }
 
         @media (min-width: $break-point-tablet) {
