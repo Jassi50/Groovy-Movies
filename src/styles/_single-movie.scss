@@ -9,9 +9,9 @@
     margin: 0 auto;
     max-width: 43.75rem;
     position: relative;
-
+    z-index: -1;
     .single-movie-content {
-        max-width: 70%;
+        max-width: 90%;
         margin: 0 auto;
         position: relative;
         z-index: 1;
@@ -25,6 +25,9 @@
         .single-page-title {
             border-bottom: 3px solid #b360b0;
             display: inline;
+        }
+        .single-movie-info {
+            padding: 1rem;
         }
         .heart-icon {
             display: inline-flex;
