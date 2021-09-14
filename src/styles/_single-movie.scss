@@ -28,11 +28,11 @@
         }
         .heart-icon {
             display: inline-flex;
+            align-items: flex-end;
         }
 
         .icon-flex {
             display: flex;
-            align-self: flex-end;
         }
 
         @media (min-width: $break-point-tablet) {
