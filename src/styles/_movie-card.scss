@@ -18,12 +18,18 @@
             top: 5px;
             right: 5px;
         }
+
+        .movie-rating {
+            position: absolute;
+            top: 60px;
+            right: 5px;
+        }
         background-color: $main-purple;
         padding: $generic-spacing2;
         //curvature for bottom of cards
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
-        min-height: 124px; // setting the minimum info height to what a container would look like with 2 lines of text
+        min-height: 95px; // setting the minimum info height to what a container would look like with 2 lines of text
 
         p {
             max-width: 80%; // creating room for icons
