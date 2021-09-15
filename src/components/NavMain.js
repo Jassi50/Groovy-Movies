@@ -9,7 +9,7 @@
 
 //     const [toggleMenu, setToggleMenu] = useState(false)
 //     const [screenWidth, setScreenWidth] =useState(window.innerWidth)
-    
+
 
 //     const toggleNav = () => {
 //         setToggleMenu(!toggleMenu)
@@ -27,8 +27,8 @@
 
 //     return (
 //         <div className="nav-container">
-           
-//           <label onClick={toggleNav} className="btn" for="toggle"><FaBars/></label>
+
+//           <label onClick={toggleNav} className="btn" htmlFor="toggle"><FaBars/></label>
 //         <nav className="nav">
 //             {(toggleMenu || screenWidth > 800) && ( <ul className="menu">
 //               <li><NavLink to="/" exact>
@@ -37,13 +37,13 @@
 //               <li><NavLink to="/about"> <img className="hover" src={hover} alt="hover-effect"/>About</NavLink></li>
 //               <li><NavLink to="/favorites" ><img className="hover favorites" src={hover} alt="hover-effect"/>Favorites</NavLink></li>
 //           </ul>  )}
-            
-           
-         
-        
-           
+
+
+
+
+
 //         </nav>
-      
+
 
 //         </div>
 //     )
