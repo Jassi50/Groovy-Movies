@@ -84,7 +84,7 @@ function MovieCard({ movieObj }) {
                     <p>Rating:</p>
                     <p className="movie-rating">{displayRating(movieObj.vote_average)}</p>
                 </div>
-                <button className="card-button"><Link to={`movie/${movieObj.id}`}>More Info</Link></button>
+                <button className="card-button"><Link to={`/movie/${movieObj.id}`}>More Info</Link></button>
             </div>
         </div>
     )
