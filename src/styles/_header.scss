@@ -6,17 +6,16 @@ ul {
 }
 
 header {
+
   display: flex;
   background-color: $main-purple;
   justify-content: space-between;
   position: relative;
   height: 50px;
 
-// .searchResults {
-//   position: absolute;
-//   top: 0%;
-//   left: 0;
-// }
+  nav{
+    z-index: 5;
+  }
 
   h1 {
     padding-left: 2rem;
