@@ -9,7 +9,13 @@
 
     //media querry display 4
 
-    @media(min-width: $break-point-desktop){
+    @media(min-width: $break-point-desktop-small){
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: $generic-spacing;
+    }
+
+    @media(min-width: $break-point-desktop-large){
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         gap: $generic-spacing;

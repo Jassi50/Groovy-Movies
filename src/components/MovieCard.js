@@ -79,8 +79,11 @@ function MovieCard({ movieObj }) {
             </div>
             <div className="movie-info">
                 <p>{movieObj.title}</p>
-                <p className="movie-rating">{displayRating(movieObj.vote_average)}</p>
                 <FavoriteButton movieObj={movieObj} />
+                <div className="rating">
+                    <p>Rating:</p>
+                    <p className="movie-rating">{displayRating(movieObj.vote_average)}</p>
+                </div>
                 <button className="card-button"><Link to={`movie/${movieObj.id}`}>More Info</Link></button>
             </div>
         </div>
