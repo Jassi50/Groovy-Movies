@@ -64,13 +64,13 @@ function MovieCard({ movieObj }) {
                             <div className="hover-name">
                                 <p>{movieObj.title}</p>
                             </div>
-                            <div className="hover-info1">
-                                <p>Rated: </p>
+                           
+                            <div className="hover-info">
+                            <p>Rated: </p>
                                 <p>Produced: {movieObj.release_date}</p>
                                 <p>Genre: </p>
                                 <p>Duration:</p>
-                            </div>
-                            <div className="hover-info2">
+                                <p>Rating:</p>
                                 <p>{movieObj.overview}</p>
                             </div>
                         </span>
