@@ -9,11 +9,9 @@ import { useLocation } from 'react-router-dom';
 function PageHome({ sort }) {
 
     const [movieData, setMovieData] = useState(null);
-    //const [homePageSearchResults, setHomePageSearchResults] = useState(searchResults)
     const globalStateAndGlobalActions = useGlobal();
     const globalState = globalStateAndGlobalActions[0];
     const globalActions = globalStateAndGlobalActions[1];
-    //const [search, setSearch] = useState(null);
 
     let sortForURL;
 
@@ -65,23 +63,6 @@ function PageHome({ sort }) {
 
     }, [query, globalActions, sort, sortForURL, globalState.currentURL]);
 
-    // function useQuery() {
-    //     return new URLSearchParams(useLocation().search);
-    // }
-
-    //const query = useQuery().get('query');
-    //const [movieData, setMovieData] = useState(null);
-    //const [inputError, setInputError] = useState(null);
-
-    // function noMoviesMessage() {
-    //     if (movieData === null && inputError === null) {
-    //         return <p>Enter a movie title in the form above to search for a movie...</p>
-    //     } else if (movieData === null && inputError !== null) {
-    //         return <p>{inputError}</p>
-    //     } else if (movieData !== null && movieData.length === 0) {
-    //         return <p>Sorry, no movies matched your search term...</p>
-    //     }
-    // }
     useEffect(() => {
 
 
@@ -101,13 +82,7 @@ function PageHome({ sort }) {
             const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${q}&page=1&include_adult=false`);
             let data = await res.json();
             let first12Movies = data.results.splice(0, 12);
-            // console.log('from HeaderSearch', first12Movies);
             setMovieData(first12Movies);
-            // if (isMounted) {
-            //     //globalActions.setSearchResults(first12Movies);
-            // }
-            //handleSearch(first12Movies);
-
         }
 
         fetchMovies(queryURIEncoded);
@@ -118,7 +93,6 @@ function PageHome({ sort }) {
 
     return (
         <section className="home-page">
-            {/* <NavSort /> */}
             {/* {console.log('From Home', globalState.searchResults)} */}
             {/* Display movie data if there's movie data to display*/}
             {console.log('QUERY', 'foo')}
