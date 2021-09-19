@@ -60,17 +60,13 @@ function MovieCard({ movieObj }) {
                             <img src={noPoster} alt="No poster is available" /> :
                             <img src={`https://image.tmdb.org/t/p/w500/${movieObj.poster_path}`} alt={movieObj.title} />
                         }
-                        <span className="hover-text"> 
-                            <div className="hover-name">
-                                <p>{movieObj.title}</p>
-                            </div>
-                           
+                      <span className="hover-text">
                             <div className="hover-info">
-                            <p>Rated: </p>
+                            <h2>{movieObj.title}</h2>
+                                <p>Rated: </p>
                                 <p>Produced: {movieObj.release_date}</p>
                                 <p>Genre: </p>
                                 <p>Duration:</p>
-                                <p>Rating:</p>
                                 <p>{movieObj.overview}</p>
                             </div>
                         </span>
