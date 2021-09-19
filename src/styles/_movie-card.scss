@@ -62,6 +62,7 @@
     // display: none;
 }
 
+<<<<<<< Updated upstream
 .hover-name {
     position: absolute;
     left: 3%;
@@ -83,6 +84,26 @@
     text-align: justify;
     padding: 20px;
 }
+=======
+ .hover-name {
+        position: absolute;
+        left: 3%;
+        top: 0.5%;
+    }
+    
+
+    
+    .hover-info {
+        position: absolute;
+        top: 0%;
+        background-color: grey;
+        width: auto;
+        height: 350px;
+        overflow: auto;
+        text-align: justify;
+        padding: 20px;
+    }
+>>>>>>> Stashed changes
 .hover-text {
     display: none;
 }
