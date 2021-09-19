@@ -9,8 +9,9 @@ import logo from "../images/logo.png";
 
 import hover from "../images/LightHover.png";
 import { FaBars } from "react-icons/fa";
+import HeaderSearch from "./HeaderSearch";
 
-function Header() {
+function Header({ handleSearch }) {
     const [toggleSearch, setToggleSearch] = useState(false);
     const [toggleFilter, setToggleFilter] = useState(false);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -75,23 +76,20 @@ function Header() {
 
                 <FaSearch onClick={searchToggle} className="search-icon" />
                 {screenWidth > 800 && (
-                    <div className="search-bar2">
-                        <input type="text" placeholder="Search.." id="search" />
-                        <label htmlFor="search"></label>
-                    </div>
+                    <HeaderSearch className="search-bar2" handleSearch={handleSearch} />
                 )}
 
                 <label
                     onClick={filterToggle}
                     className="btn-filter"
-                    for="toggle"
+                    htmlFor="toggle"
                 >
                     <FaFilter onClick={filterToggle} className="filter-icon" />
                 </label>
 
                 {/* <NavMain /> */}
                 <div className="nav-container">
-                    <label onClick={toggleNav} className="btn" for="toggle">
+                    <label onClick={toggleNav} className="btn" htmlFor="toggle">
                         <FaBars />
                     </label>
                     <nav className="nav">
@@ -136,10 +134,7 @@ function Header() {
                 </div>
 
                 {toggleSearch && (
-                    <div className="search-bar">
-                        <input type="text" placeholder="Search.." id="search" />
-                        <label htmlFor="search"></label>
-                    </div>
+                    <HeaderSearch className="search-bar" handleSearch={handleSearch} />
                 )}
 
                 {/* <FaSearch className="search-icon-mobile" /> */}

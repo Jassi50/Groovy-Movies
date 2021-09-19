@@ -12,22 +12,39 @@
     }
 
     .movie-info {
+        //first P tag in movie info
+        :nth-child(1) {
+            margin-bottom: 5px; 
+        }
+        :nth-child(2) {
+            margin-bottom: 0px; 
+        }
         position: relative;
+        height: 100px;
         .heart-icon {
             position: absolute;
             top: 5px;
             right: 5px;
         }
+
+        .rating {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: nowrap;
+        }
+
+        p {
+            max-width: 90%; // creating room for icons
+        }
+
         background-color: $main-purple;
         padding: $generic-spacing2;
         //curvature for bottom of cards
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
-        min-height: 124px; // setting the minimum info height to what a container would look like with 2 lines of text
-
-        p {
-            max-width: 80%; // creating room for icons
-        }
     }
 
     .card-button {
