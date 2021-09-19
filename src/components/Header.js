@@ -68,6 +68,7 @@ function Header({ handleSearch }) {
         <>
             <header>
                 {/*This will later become an image to reflect my logo */}
+                {/* Header Icons */}
                 <h1>
                     <NavLink to="/">
                         <img className="logo" src={logo} alt="logo" />
@@ -86,8 +87,9 @@ function Header({ handleSearch }) {
                 >
                     <FaFilter onClick={filterToggle} className="filter-icon" />
                 </label>
+                {/* Header Icons end*/}
 
-                {/* <NavMain /> */}
+                {/* <NavSort /> */}
                 <div className="nav-container">
                     <label onClick={toggleNav} className="btn" htmlFor="toggle">
                         <FaBars />
