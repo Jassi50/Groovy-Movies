@@ -1,24 +1,25 @@
 /** @format */
 
 import { NavLink } from "react-router-dom";
-// import NavMain from "./NavMain";
 import { FaSearch } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { FaFilter } from "react-icons/fa";
 import logo from "../images/logo.png";
-
 import hover from "../images/LightHover.png";
 import { FaBars } from "react-icons/fa";
 import HeaderSearch from "./HeaderSearch";
 
 function Header({ handleSearch }) {
+    //state for icons
     const [toggleSearch, setToggleSearch] = useState(false);
     const [toggleFilter, setToggleFilter] = useState(false);
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
     const [toggleMenu, setToggleMenu] = useState(false);
+
+    //state for checking window size
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [screenWidthNav, setScreenWidthNav] = useState(window.innerWidth);
 
+    //toggle functions
     const searchToggle = () => {
         if (toggleFilter === true) {
             setToggleFilter(false);
@@ -37,14 +38,6 @@ function Header({ handleSearch }) {
         }
         setToggleFilter(!toggleFilter);
     };
-
-    useEffect(() => {
-        const changeWidth = () => {
-            setScreenWidth(window.innerWidth);
-        };
-        window.addEventListener("resize", changeWidth);
-    }, []);
-
     //nav sort  section
     const toggleNav = () => {
         if (toggleFilter === true) {
@@ -57,29 +50,39 @@ function Header({ handleSearch }) {
         setToggleMenu(!toggleMenu);
     };
 
+    //checks and closes windows on resize
     useEffect(() => {
         const changeWidthNav = () => {
             setScreenWidthNav(window.innerWidth);
         };
         window.addEventListener("resize", changeWidthNav);
     }, []);
+    useEffect(() => {
+        const changeWidth = () => {
+            setScreenWidth(window.innerWidth);
+        };
+        window.addEventListener("resize", changeWidth);
+    }, []);
 
     return (
         <>
             <header>
-                {/*This will later become an image to reflect my logo */}
-                {/* Header Icons */}
+                {/* Logo */}
                 <h1>
                     <NavLink to="/">
                         <img className="logo" src={logo} alt="logo" />
                     </NavLink>
                 </h1>
 
+                {/* icons */}
                 <FaSearch onClick={searchToggle} className="search-icon" />
                 {screenWidth > 800 && (
-                    <HeaderSearch className="search-bar2" handleSearch={handleSearch} />
+                    <HeaderSearch
+                        className="search-bar2"
+                        handleSearch={handleSearch}
+                    />
                 )}
-
+                {/* Filter icon*/}
                 <label
                     onClick={filterToggle}
                     className="btn-filter"
@@ -87,9 +90,8 @@ function Header({ handleSearch }) {
                 >
                     <FaFilter onClick={filterToggle} className="filter-icon" />
                 </label>
-                {/* Header Icons end*/}
 
-                {/* <NavSort /> */}
+                {/* Menu - Home - About - Favorites */}
                 <div className="nav-container">
                     <label onClick={toggleNav} className="btn" htmlFor="toggle">
                         <FaBars />
@@ -136,10 +138,15 @@ function Header({ handleSearch }) {
                 </div>
 
                 {toggleSearch && (
-                    <HeaderSearch className="search-bar" handleSearch={handleSearch} />
+                    <HeaderSearch
+                        className="search-bar"
+                        handleSearch={handleSearch}
+                    />
                 )}
 
-                {/* <FaSearch className="search-icon-mobile" /> */}
+                {/* Header Icons end*/}
+
+                {/* Desktop Nav-sort/Pill Slider */}
             </header>
             {(toggleFilter || screenWidthNav > 800) && (
                 <div>
