@@ -1,7 +1,4 @@
 import useGlobal from '../store/globalAppStorage';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import MovieCard from '../components/MovieCard';
 import Movies from '../components/Movies';
 
 
@@ -9,7 +6,7 @@ import Movies from '../components/Movies';
 
 function PageFavorites() {
     
-    const [globalState, globalActions] = useGlobal();
+    const [globalState] = useGlobal();
 
     return (
         <section className="favorites-page">

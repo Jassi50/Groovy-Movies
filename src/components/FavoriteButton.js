@@ -1,7 +1,7 @@
 import useGlobal from '../store/globalAppStorage';
 import fullHeart from '../images/full-heart.png';
 import emptyHeart from '../images/empty-heart.svg';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 //favorite button
 

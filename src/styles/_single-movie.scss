@@ -3,8 +3,7 @@
 .single-movie-page {
     margin: 1.25rem;
 
-    .single-movie {
-                
+    .single-movie {    
         img {
             width: 100%;
             display:block; //image fills up container
@@ -12,11 +11,10 @@
 
         padding: 0.625rem;
         margin: 0 auto;
-        
         position: relative;
     
         .single-movie-content {        
-            max-width: 400px; // maximum container width mobile
+            max-width: 350px; // maximum container width mobile
             margin: 0 auto;
             position: relative;
             display: flex;
