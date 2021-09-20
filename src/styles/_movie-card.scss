@@ -52,7 +52,7 @@
         position: absolute;
         z-index: -1;
         //center more info button within a movie-card
-        left: 0;
+        left: 27%;
         right: 0;
         margin: auto;
         bottom: 110px; //place button 110 px away from the bottom of a card
@@ -95,10 +95,13 @@
     top: 0%;
     background-color: grey;
     width: auto;
-    height: 350px;
+    height: 100%;
     overflow: auto;
     text-align: justify;
     padding: 20px;
+    padding-bottom: 150px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 .hover-text {
     display: none;
