@@ -5,8 +5,6 @@ import PageHome from '../pages/PageHome';
 import PageAbout from '../pages/PageAbout';
 import PageFavorites from '../pages/PageFavorites';
 import PageSingleMovie from '../pages/PageSingleMovie';
-//import Search from '../components/Search';
-//import { useState } from 'react';
 
 function AppRouter() {
 
@@ -26,8 +24,6 @@ function AppRouter() {
             <Route path="/about"><PageAbout /></Route>
             <Route path="/favorites"><PageFavorites /></Route>
             <Route path="/movie/:id"><PageSingleMovie /></Route>
-            {/* <Route path={'/search/:query'}><Search /></Route>
-            <Route path={'/search'}><Search /></Route> */}
           </Switch>
         </main>
         <Footer />

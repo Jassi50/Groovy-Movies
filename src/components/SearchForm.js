@@ -9,7 +9,7 @@ function SearchForm({ handleSubmit }) {
         e.preventDefault();
         getMovies(e.target.elements.searchMovies.value);
     }
-
+    // slow down how often the api is called
     function liveSearch(e) {
         getMoviesThrottled(e.target.value);
     }

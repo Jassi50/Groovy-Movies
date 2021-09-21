@@ -15,15 +15,7 @@ function Search() {
     const [movieData, setMovieData] = useState(null);
     const [inputError, setInputError] = useState(null);
 
-    function noMoviesMessage() {
-        if (movieData === null && inputError === null) {
-            return <p>Enter a movie title in the form above to search for a movie...</p>
-        } else if (movieData === null && inputError !== null) {
-            return <p>{inputError}</p>
-        } else if (movieData !== null && movieData.length === 0) {
-            return <p>Sorry, no movies matched your search term...</p>
-        }
-    }
+    // show movies if search terms entered
     useEffect(() => {
         if (query === null || query === '') {
             return;
@@ -32,22 +24,22 @@ function Search() {
         fetchMovies(queryURIEncoded);
     }, [query]);
 
+    // Call the first 12 results from the api
     async function fetchMovies(q) {
         const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${q}&page=1&include_adult=false`);
         let data = await res.json();
         let first12Movies = data.results.splice(0, 12);
-        console.log(first12Movies);
         setMovieData(first12Movies);
     }
 
+    // store and trim the search terms
     function updateAddressBar(q) {
-        console.log('query received from form...');
-        console.log(q);
         q = q.trim();
 
         if (q === '') {
             setInputError('No search term entered')
             setMovieData(null);
+            console.log(inputError);
             history.push('/search');
             return;
         }
@@ -59,7 +51,6 @@ function Search() {
             <section>
                 <p>Hello!!!</p>
                 <SearchForm handleSubmit={updateAddressBar} />
-                {noMoviesMessage()}
                 {movieData !== null && <Movies movieData={movieData} />}
             </section>
         </main>
