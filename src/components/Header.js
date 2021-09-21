@@ -19,7 +19,9 @@ function Header({ handleSearch }) {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [screenWidthNav, setScreenWidthNav] = useState(window.innerWidth);
 
-    //toggle functions
+    // conditionally render toggle menus based on which icon was clicked
+
+    //toggle nav menu
     const searchToggle = () => {
         if (toggleFilter === true) {
             setToggleFilter(false);
@@ -29,6 +31,8 @@ function Header({ handleSearch }) {
         }
         setToggleSearch(!toggleSearch);
     };
+
+    //toggle search input
     const filterToggle = () => {
         if (toggleSearch === true) {
             setToggleSearch(false);
@@ -38,7 +42,8 @@ function Header({ handleSearch }) {
         }
         setToggleFilter(!toggleFilter);
     };
-    //nav sort  section
+
+    // toggle search facets
     const toggleNav = () => {
         if (toggleFilter === true) {
             setToggleFilter(false);
@@ -49,8 +54,10 @@ function Header({ handleSearch }) {
 
         setToggleMenu(!toggleMenu);
     };
+    //Conditional render logic based on button press end,
 
-    //checks and closes windows on resize
+
+    //upon window resize or componment mounting (pressing any link or window resize), make the nav disapear upon mount a different component 
     useEffect(() => {
         const changeWidthNav = () => {
             setScreenWidthNav(window.innerWidth);

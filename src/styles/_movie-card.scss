@@ -1,6 +1,9 @@
 /** @format */
 
 .movie-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     position: relative; // card itself is container
     max-width: 300px;
     margin: 0 auto;
@@ -8,19 +11,19 @@
 
     img {
         display: block; // allows for the image to stretch the height of it's container
-        width: 100%; &:hover {
-            background-color: rgba(56, 56, 56, 0.8);
-        }
     }
 
     .movie-info {
+        flex-grow: 1;
+
         //first P tag in movie info
         :nth-child(1) {
-            margin-bottom: 5px; 
+            margin-bottom: 5px;
         }
         :nth-child(2) {
-            margin-bottom: 0px; 
+            margin-bottom: 0px;
         }
+
         position: relative;
         height: 100px;
         .heart-icon {
@@ -55,7 +58,6 @@
         z-index: -1;
         //center more info button within a movie-card
         left: 27%;
-        right: 0;
         margin: auto;
         bottom: 110px; //place button 110 px away from the bottom of a card
         background-color: $second-green;
@@ -75,36 +77,28 @@
         }
     }
 }
-
-.movie-div {
-    background-color: rgba(56, 56, 56, 0.8);
-    // &:hover {
-    //     background-color: rgba(56, 56, 56, 0.8);
-    // }
-    // display: none;
+.movie-poster {
+    .movie-div {
+        .hover-text {
+            display: none;
+            .hover-info {
+                position: absolute;
+                top: 0%;
+                width: auto;
+                height: max-content;
+                overflow: auto;
+                text-align: justify;
+                height: 70%;
+                padding: 20px;
+                background-color: rgba(56, 56, 56, 0.8);
+                height: 90%;
+                padding-bottom: 100px;
+            }
+        }
+    }
 }
 
- .hover-name {
-        position: absolute;
-        left: 3%;
-        top: 0.5%;
-    }
-    .hover-info {
-        position: absolute;
-        top: 0%;
-        background-color:#69696D;
-        width: auto;
-        height: 70%;
-        overflow: auto;
-        text-align: justify;
-        padding: 20px;
-        // opacity: 0.7;
-        background-color: rgba(56, 56, 56, 0.8);
-    }
-.hover-text {
-    display: none;
-}
 .movie-poster:hover .hover-text {
     display: block;
+    background-color: rgba(56, 56, 56, 0.8);
 }
-

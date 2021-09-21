@@ -23,11 +23,8 @@ function PageSingleMovie() {
             });
             let rawMovieData = await res.json();
             setMovieData(rawMovieData);
-
         }
-
         fetchMovie();
-
     }, [id]);
 
     return (
