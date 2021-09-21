@@ -8,7 +8,9 @@
 
     img {
         display: block; // allows for the image to stretch the height of it's container
-        width: 100%;
+        width: 100%; &:hover {
+            background-color: rgba(56, 56, 56, 0.8);
+        }
     }
 
     .movie-info {
@@ -75,7 +77,10 @@
 }
 
 .movie-div {
-    background-color: black;
+    background-color: rgba(56, 56, 56, 0.8);
+    // &:hover {
+    //     background-color: rgba(56, 56, 56, 0.8);
+    // }
     // display: none;
 }
 
@@ -89,11 +94,12 @@
         top: 0%;
         background-color:#69696D;
         width: auto;
-        height: 350px;
+        height: 70%;
         overflow: auto;
         text-align: justify;
         padding: 20px;
-        opacity: 0.7;
+        // opacity: 0.7;
+        background-color: rgba(56, 56, 56, 0.8);
     }
 .hover-text {
     display: none;
@@ -102,6 +108,3 @@
     display: block;
 }
 
-.movie-poster:hover .movie-div {
-    display: block;
-}
