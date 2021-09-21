@@ -1,21 +1,24 @@
+/** @format */
+
 .movies-container {
     padding: $left-right-spacing;
 
-    @media(min-width: $break-point-tablet){
+    @media (min-width: $break-point-tablet) {
         display: grid;
+
         grid-template-columns: repeat(3, 1fr);
         gap: $generic-spacing;
     }
 
     //media querry display 4
 
-    @media(min-width: $break-point-desktop-small){
+    @media (min-width: $break-point-desktop-small) {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: $generic-spacing;
     }
 
-    @media(min-width: $break-point-desktop-large){
+    @media (min-width: $break-point-desktop-large) {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         gap: $generic-spacing;

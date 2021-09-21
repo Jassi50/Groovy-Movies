@@ -1,175 +1,192 @@
 /** @format */
 
 ul {
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    padding-left: 0;
 }
 
 header {
+    display: flex;
+    background-color: $main-purple;
+    justify-content: space-between;
+    position: relative;
+    height: 50px;
 
-  display: flex;
-  background-color: $main-purple;
-  justify-content: space-between;
-  position: relative;
-  height: 50px;
+    nav {
+        z-index: 5;
+    }
 
-  nav{
-    z-index: 5;
-  }
+    h1 {
+        padding-left: 2rem;
+        padding-top: 0.5rem;
+    }
+    .logo {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        max-height: 32px;
+        padding-left: 0.5rem;
+        padding-top: 0.5rem;
+    }
+}
 
-  h1 {
-    padding-left: 2rem;
-    padding-top: 0.5rem;
-  }
-  .logo {
+//clears blue x in chrome and other browsers
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+//gets rid of outline
+input:focus {
+    outline: none;
+}
+
+.search-button {
     position: absolute;
-    top: 5px;
-    left: 0;
-    max-height: 32px;
-    padding-left: 0.5rem;
-    padding-top: 0.5rem;
-  }
+    right: 64px;
+    opacity: 0;
 }
 
 .search-icon {
-  position: absolute;
-  right: 60px;
-  top: 12px;
-  font-size: 1.5rem;
-  z-index: 10;
+    position: absolute;
+    right: 64px;
+    top: 12px;
+    font-size: 1.5rem;
+    z-index: 10;
 }
 
 .search-bar {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  top: 50px;
-  background-color: $main-purple;
-  padding: 0.5rem;
-  text-align: center;
-  z-index: 2;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 50px;
+    background-color: $main-purple;
+    padding: 0.5rem;
+    text-align: center;
+    z-index: 2;
 }
 
 .filter-icon {
-  position: absolute;
-  top: 13px;
-  right: 105px;
-  font-size: 1.5rem;
-  z-index: 10;
+    position: absolute;
+    top: 13px;
+    right: 105px;
+    font-size: 1.5rem;
+    z-index: 10;
 }
 
 .nav-sort1 {
-  position: absolute;
-  top: 3rem;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: $main-purple;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 10;
+    position: absolute;
+    top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $main-purple;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
 
-  a {
-    display: block;
-    padding: 0.7rem;
-    text-decoration: none;
-  }
+    a {
+        display: block;
+        padding: 0.7rem;
+        text-decoration: none;
+    }
 }
 
 @media screen and (min-width: $break-point-tablet) {
-  header {
-    margin-bottom: 4.5rem;
+    header {
+        margin-bottom: 4.5rem;
 
-    h1 {
-      z-index: 100;
+        h1 {
+            z-index: 100;
+        }
+
+        .logo {
+            position: static;
+            max-height: 37px;
+            margin-top: -5px;
+            z-index: 1000;
+            padding-left: 0;
+        }
     }
 
-    .logo {
-      position: static;
-      max-height: 37px;
-      margin-top: -5px;
-      z-index: 1000;
-      padding-left: 0;
+    .search-bar2 {
+        position: absolute;
+        top: 12px;
+        right: 22px;
+        z-index: 1000;
     }
-  }
 
-  .search-bar2 {
-    position: absolute;
-    top: 12px;
-    right: 22px;
-    z-index: 1000;
-  }
+    .search-bar {
+        top: 0;
+        right: 0;
+        margin: 0;
+        text-align: end;
+        background-color: none;
+        display: none;
+    }
 
-  .search-bar {
-    top: 0;
-    right: 0;
-    margin: 0;
-    text-align: end;
-    background-color: none;
-    display: none;
-  }
+    .search-icon {
+        right: 32px;
+        position: absolute;
+        color: #c2c2c2;
+        z-index: 10000;
+        top: 16px;
+        font-size: 1rem;
+    }
 
-  .search-icon {
-    right: 32px;
-    position: absolute;
-    color: #c2c2c2;
-    z-index: 10000;
-    top: 16px;
-    font-size: 1rem;
-  }
+    .filter-icon {
+        display: none;
+    }
 
-  .filter-icon {
-    display: none;
-  }
+    .nav-sort1 {
+        position: absolute;
+        top: 3.5rem;
+        display: flex;
+        width: 32rem;
+        height: 2rem;
+        margin: 1rem auto;
+        background-color: $second-purple;
+        border-radius: 20px;
+    }
 
-  .nav-sort1 {
-    position: absolute;
-    top: 3.5rem;
-    display: flex;
-    width: 32rem;
-    height: 2rem;
-    margin: 1rem auto;
-    background-color: $second-purple;
-    border-radius: 20px;
-  }
+    .nav-sort1 a {
+        padding: 0.5rem;
+        width: 25%;
+        text-align: center;
+        text-decoration: none;
+        z-index: 2;
+    }
 
-  .nav-sort1 a {
-    padding: 0.5rem;
-    width: 25%;
-    text-align: center;
-    text-decoration: none;
-    z-index: 2;
-  }
+    .nav-sort1 a:hover ~ #animate {
+        display: block;
+    }
+    .nav-sort1 a:hover {
+        color: $title-color;
+    }
 
-  .nav-sort1 a:hover ~ #animate {
-    display: block;
-  }
-  .nav-sort1 a:hover {
-    color: $title-color;
-  }
+    .nav-sort1 a:nth-child(1):hover ~ #animate {
+        left: 0;
+    }
+    .nav-sort1 a:nth-child(2):hover ~ #animate {
+        left: 8rem;
+    }
+    .nav-sort1 a:nth-child(3):hover ~ #animate {
+        left: 16rem;
+    }
+    .nav-sort1 a:nth-child(4):hover ~ #animate {
+        left: 24rem;
+    }
 
-  .nav-sort1 a:nth-child(1):hover ~ #animate {
-    left: 0;
-  }
-  .nav-sort1 a:nth-child(2):hover ~ #animate {
-    left: 8rem;
-  }
-  .nav-sort1 a:nth-child(3):hover ~ #animate {
-    left: 16rem;
-  }
-  .nav-sort1 a:nth-child(4):hover ~ #animate {
-    left: 24rem;
-  }
-
-  div #animate {
-    position: absolute;
-    width: 8rem;
-    height: 2rem;
-    background-color: $main-purple;
-    border-radius: 20px;
-    transition: all 0.4s ease;
-    display: none;
-  }
+    div #animate {
+        position: absolute;
+        width: 8rem;
+        height: 2rem;
+        background-color: $main-purple;
+        border-radius: 20px;
+        transition: all 0.4s ease;
+        display: none;
+    }
 }

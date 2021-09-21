@@ -10,9 +10,7 @@ function SearchForm({ handleSubmit }) {
         getMovies(e.target.elements.searchMovies.value);
     }
 
-    function liveSearch(e) {
-        getMoviesThrottled(e.target.value);
-    }
+  
 
     function getMovies(q) {
         handleSubmit(q);
@@ -20,7 +18,7 @@ function SearchForm({ handleSubmit }) {
 
     return (
         <form onSubmit={submitSearch}>
-            <input type="search" id="search-movies" name="searchMovies" onChange={liveSearch} placeholder="Search....." />
+            <input type="search" id="search-movies" name="searchMovies"  placeholder="Search....." />
             <label htmlFor="search-movies"></label>
             <button className="search-button" type="submit"><FaSearch /></button>
         </form>
