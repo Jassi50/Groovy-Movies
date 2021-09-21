@@ -43,9 +43,6 @@ const actions = {
     setFavorites: (store) => {
         store.setState({ favorites: getFavorites() })
     },
-    // setSearchResults: (store) => {
-    //     store.setState({ searchResults: store })
-    // },
     setCurrentURL: (store, url) => {
         store.setState({ currentURL: url })
     }
@@ -53,7 +50,6 @@ const actions = {
 
 const initialState = {
     favorites: getFavorites(),
-    //searchResults: null,
     currentURL: '/'
 }
 
