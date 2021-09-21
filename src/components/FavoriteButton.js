@@ -24,7 +24,7 @@ function FavoriteButton( {movieObj} ) {
         return globalState.favorites.some((movieObj) => movieObj.id === id);
     }
     
-    // depending on whether the movie id was found conditionally render the favorite button
+    // conditionally render the favorites button depending on wether the movieObj.id was found or not
     return (
         <div>
             {

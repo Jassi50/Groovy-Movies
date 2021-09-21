@@ -5,8 +5,6 @@ import PageHome from '../pages/PageHome';
 import PageAbout from '../pages/PageAbout';
 import PageFavorites from '../pages/PageFavorites';
 import PageSingleMovie from '../pages/PageSingleMovie';
-//import Search from '../components/Search';
-//import { useState } from 'react';
 
 function AppRouter() {
 

@@ -36,13 +36,10 @@ function Search() {
         const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${q}&page=1&include_adult=false`);
         let data = await res.json();
         let first12Movies = data.results.splice(0, 12);
-        console.log(first12Movies);
         setMovieData(first12Movies);
     }
 
     function updateAddressBar(q) {
-        console.log('query received from form...');
-        console.log(q);
         q = q.trim();
 
         if (q === '') {

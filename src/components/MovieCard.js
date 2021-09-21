@@ -7,6 +7,10 @@ import genres from '../utilities/globals';
 function MovieCard({ movieObj }) {
     function displayRating(rating) {
         
+        /*
+            conditionally render an amount of starts based on the movieObj.vote_average 
+            every 2.0 adds a star to the movie rating 
+        */ 
         if(rating > 0 && rating <= 2){
             return "⭐";
         }
@@ -25,13 +29,14 @@ function MovieCard({ movieObj }) {
         else {
             return "N/A";
         }
-        
     }
 
+    // render the movieObj.vote_average as a percent (example 6.3 * 10 = 63%)
     function displayRatingPercent(rating){
         return `${rating * 10}%`;
     }
 
+    //display the list of genres
     function displayGenre(genreList){
         let x;
         let y;

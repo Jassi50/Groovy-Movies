@@ -28,18 +28,10 @@ function PageHome({ sort }) {
 
     const query = useQuery().get('query');
 
-    //setSearch(query);
-
     //this use effect function runs whenever PageHome is mounted or when sort changes sort is passed to this function as a prop
     useEffect(() => {
 
         globalActions.setCurrentURL(sortForURL);
-        //console.log(sortForURL);
-        console.log('UE', globalState.currentURL);
-
-        //console.log('Search Results from useEffect on Home Page', homePageSearchResults)
-
-        console.log('QUERY FROM USE EFFECT', query);
 
         if (query !== null) {
             return;
@@ -65,18 +57,11 @@ function PageHome({ sort }) {
 
     useEffect(() => {
 
-
-        console.log('QUERY FROM SEARCH UE', query);
-
         if (query === null || query === '') {
             return;
         };
 
-        //let isMounted = true;
-
         const queryURIEncoded = encodeURIComponent(query);
-        //console.log('from Header Search', query);
-
 
         async function fetchMovies(q) {
             const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${q}&page=1&include_adult=false`);
@@ -87,15 +72,11 @@ function PageHome({ sort }) {
 
         fetchMovies(queryURIEncoded);
 
-        //return () => { isMounted = false; }
-
     }, [query]);
 
     return (
         <section className="home-page">
-            {/* {console.log('From Home', globalState.searchResults)} */}
             {/* Display movie data if there's movie data to display*/}
-            {console.log('QUERY', 'foo')}
             {movieData !== null && <Movies movieData={movieData} />}
         </section>
     )

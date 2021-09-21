@@ -21,7 +21,7 @@ function Footer() {
                     <h3>Social Media</h3>
                     <p>Join us now on our social media! You can follow us on:</p><br/>
                 </div>
-
+                {/* Social media icons imported from react-icons */}
                 <div className="icon-container">
                     <AiFillFacebook  className="social-icon"/>
                     <FaTwitter className="social-icon" />
