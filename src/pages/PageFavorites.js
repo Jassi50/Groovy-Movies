@@ -1,12 +1,23 @@
 import useGlobal from '../store/globalAppStorage';
 import Movies from '../components/Movies';
+import { useState, useEffect } from 'react';
 
 
 
 
 function PageFavorites() {
-    
-    const [globalState] = useGlobal();
+
+    const [globalState, globalActions] = useGlobal();
+  
+    const [ready, setReady] = useState(false);
+  
+    useEffect(() => {
+  
+      globalActions.setFavorites();
+      
+      setReady(true);
+  
+    }, [globalActions]);
 
     return (
         <section className="favorites-page">
@@ -19,7 +30,7 @@ function PageFavorites() {
                 }
             </div>
                 {globalState.favorites.length !== 0 &&
-                <Movies movieData={globalState.favorites} />
+                (ready && <Movies movieData={globalState.favorites} />)
                 }
         </section>
     )

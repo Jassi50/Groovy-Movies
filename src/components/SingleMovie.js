@@ -13,9 +13,10 @@ function SingleMovie({ movieObj }) {
                 }
                 </div>
                 <div className="single-movie-info">
-                    <div className="icon-flex"><h2 className="single-page-title">{movieObj.title}</h2>
-                    <FavoriteButton movieObj={movieObj} /> </div>
-                    
+                    <div className="icon-flex"><h2 className="single-page-title">
+                        {movieObj.title}</h2>
+                        <FavoriteButton movieObj={movieObj} /> 
+                    </div>
                     <p>{movieObj.overview}</p>
                 </div>
             </div>

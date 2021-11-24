@@ -38,25 +38,30 @@ function MovieCard({ movieObj }) {
 
     //display the list of genres
     function displayGenre(genreList){
-        let x;
-        let y;
-        let genreString = "";
-        //search the quotes array for a match of the id within the passed genres of array of the movie object
-        for(x = 0; x < genreList.length; x++){
-            for(y = 0; y < genres.length; y++){
-                // if genres from OBJ === genres from objects json
-                if (genreList[x] === genres[y].id){
-                    if(x === genreList.length - 1){
-                        //if were at the last genre being checked don't append a comma
-                        genreString += `${genres[y].name}`;
-                    }
-                    else {
-                        genreString += `${genres[y].name}, `;
+        if(genreList !== undefined){
+            let x;
+            let y;
+            let genreString = "";
+            //search the quotes array for a match of the id within the passed genres of array of the movie object
+            for(x = 0; x < genreList.length; x++){
+                for(y = 0; y < genres.length; y++){
+                    // if genres from OBJ === genres from objects json
+                    if (genreList[x] === genres[y].id){
+                        if(x === genreList.length - 1){
+                            //if were at the last genre being checked don't append a comma
+                            genreString += `${genres[y].name}`;
+                        }
+                        else {
+                            genreString += `${genres[y].name}, `;
+                        }
                     }
                 }
             }
+            return genreString;
         }
-        return genreString;
+        else {
+            return;
+        }
     }
     return (
         <div className="movie-card">

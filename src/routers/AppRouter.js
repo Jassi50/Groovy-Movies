@@ -5,11 +5,12 @@ import PageHome from '../pages/PageHome';
 import PageAbout from '../pages/PageAbout';
 import PageFavorites from '../pages/PageFavorites';
 import PageSingleMovie from '../pages/PageSingleMovie';
+import {App_Folder_Name} from '../utilities/globals';
 
 function AppRouter() {
 
   return (
-    <Router>
+    <Router basename={App_Folder_Name}>
       <div className="wrapper">
         <Header />
         <main>

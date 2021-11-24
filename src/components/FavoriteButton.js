@@ -1,7 +1,7 @@
 import useGlobal from '../store/globalAppStorage';
 import fullHeart from '../images/full-heart.png';
 import emptyHeart from '../images/empty-heart.svg';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 //favorite button
 
@@ -11,11 +11,10 @@ function FavoriteButton( {movieObj} ) {
 
     //check the favorites array upon component mount
     useEffect(() => {
-      globalActions.setFavorites();
-  
+        globalActions.setFavorites();
     }, [globalActions]);
 
-    //this function checks if the movie id is present in the local storage array
+    //this function checks if the movie is is present in the local storage array
     function isFavorite(id){
         if( globalState.favorites.length === 0 ){
             return false;

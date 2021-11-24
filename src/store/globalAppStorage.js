@@ -1,5 +1,4 @@
 // Global APP state used for favorites
-//import React from 'react';
 import globalHook from 'use-global-hook';
 
 //Get favorite movies from local storage
@@ -12,7 +11,7 @@ function getFavorites() {
     else {
         favoritesFromStorage = JSON.parse(favoritesFromStorage); //convert local storage string data into object
     }
-    return favoritesFromStorage
+    return favoritesFromStorage;
 }
 
 //updater actions
